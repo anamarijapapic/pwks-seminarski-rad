@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija Emanuel Vidović</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
+
+<body>
+    <button onclick="goToTop()" id="top-button" title="Idi na vrh"><i class="bi-arrow-up"></i></button>
+
+    <header>
+        <a href="#">
+            <div class="logo" title="Galerija E. Vidović">
+                <h1>Galerija</h1>
+                <img src="./assets/logo-signature.png" alt="E. Vidović" />
+            </div>
+        </a>
+
+        <input type="checkbox" id="menu-bar" />
+        <label for="menu-bar">
+            <div class="hamburger__icon" onclick="showMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#gallery" onclick="closeMenu()">O galeriji</a></li>
+                <li><a href="#artist" onclick="closeMenu()">O umjetniku</a></li>
+                <li><a href="#exhibition" onclick="closeMenu()">Stalni postav</a></li>
+                <li><a href="#visit">Posjetelji &#x25BC</a>
+                    <ul>
+                        <li><a href="#general__info" onclick="closeMenu()">Opće informacije</a></li>
+                        <li><a href="#working__hours" onclick="closeMenu()">Radno vrijeme</a></li>
+                        <li><a href="#ticket__prices" onclick="closeMenu()">Cijene ulaznica</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" onclick="closeMenu()">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <video loop muted autoplay preload="auto">
+            <source src="./assets/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero__caption">
+            <h1>Izmješteni postav <span>Muzeja grada Splita</span></h1>
+        </div>
+    </div>
+
+    <main>
+        <section id="gallery">
+            <h2>O galeriji</h2>
+            <div class="frame row two__column">
+                <article class="left__col">
+                    <p>Galerija Emanuel Vidović posvećena je liku i djelu Emanuela Vidovića, a zamišljena je kao mjesto
+                        sabiranja, obrade, istraživanja, zaštite i prezentacije slikareva materijalnog i duhovnog
+                        naslijeđa. <br /> <br /> Njen postojeći i potencijalni fundus su umjetnička djela koja ocrtavaju
+                        Vidovićev slikarski razvoj od početka do kraja stvaranja te raznovrsni muzejski materijal, koji
+                        pridonosi upotpunjavanju Vidovićeve biografije te prati prezentaciju i recepciju njegova djela.
+                    </p>
+                </article>
+                <article class="right__col">
+                </article>
+            </div>
+        </section>
+
+        <section id="artist">
+            <h2>O umjetniku</h2>
+            <div class="frame row">
+                <video loop muted autoplay preload="auto" class="artist__video">
+                    <source src="./assets/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="overlay">
+                    <h3>Emanuel Vidović <br /><span>Split, 24. prosinca 1870. <br /> – <br /> Split, 1. lipnja
+                            1953.</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="exhibition">
+            <h2>Stalni postav</h2>
+            <div class="frame row two__column">
+                <article class="picture__col">
+                    <img src="./assets/plan-1.jpg" alt="Plan postava galerije - 1. kat" title="1. kat">
+                </article>
+                <article class="picture__col">
+                    <img src="./assets/plan-2.jpg" alt="Plan postava galerije - 2. kat" title="2. kat">
+                </article>
+            </div>
+        </section>
+
+        <section id="visit">
+            <h2>Posjetitelji</h2>
+            <div class="frame row three__column">
+                <article id="general__info">
+                    <h3>Opće informacije</h3>
+
+                    <h4>Adresa</h4>
+                    <p>Poljana kraljice Jelene bb, 21000 Split</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d797.8442590504021!2d16.4405334368348!3d43.508257049590185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e009eea2e89%3A0x4ff607881aa5ca2f!2sGalerija%20Emanuela%20Vidovi%C4%87a!5e1!3m2!1shr!2shr!4v1654561532057!5m2!1shr!2shr"
+                        width="100%" height="30%" style="border: 0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h4>Vodstva</h4>
+                    <p>Moguća uz prethodnu najavu, na hrvatskom i engleskom jeziku.</p>
+
+                    <h4>Fotografiranje</h4>
+                    <p>Fotografski aparati i videokamere smiju se koristiti samo uz prethodno odobrenje uprave Galerije.
+                        <br /> Zabranjeno je korištenje umjetne rasvjete.
+                    </p>
+                </article>
+                <article id="working__hours">
+                    <h3>Radno vrijeme</h3>
+
+                    <h4>Siječanj, veljača, ožujak
+                        <br /> studeni, prosinac
+                    </h4>
+                    <p>utorak - subota: 9 - 17
+                        <br /> nedjelja: 9 - 14
+                    </p>
+
+                    <h4>Travanj, svibanj, lipanj
+                        <br /> srpanj, kolovoz, rujan
+                    </h4>
+                    <p>utorak - nedjelja: 8.30 - 21</p>
+
+                    <h4>Listopad</h4>
+                    <p>utorak - subota: 8.30 - 21
+                        <br /> nedjelja: 9 - 17
+                    </p>
+
+                    <br /> <br />
+                    <h4>Ponedjeljkom i praznicima zatvoreno</h4>
+                </article>
+                <article id="ticket__prices">
+                    <h3>Cijene ulaznica</h3>
+                    <h4>25 kn</h4>
+                    <p>odrasli</p>
+
+                    <h4>17 kn</h4>
+                    <p>organizirani grupni posjet</p>
+
+                    <h4>15 kn</h4>
+                    <ul>
+                        <li>obitelj s djecom</li>
+                        <li>djeca</li>
+                        <li>učenici</li>
+                        <li>studenti</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Obratite nam se</h2>
+            <div class="frame row two__column">
+                <article class="left__col">
+                    <p>Želite se najaviti i rezervirati stručno vodstvo? Imate dodatnih pitanja u vezi sa svojim
+                        planiranim
+                        posjetom?
+                        <br /> <br />Slobodno nas kontaktirajte ovdje putem obrasca ili preko naših društvenih kanala.
+                        <br /> <br />
+                        <a href=tel:+38521360155><i class="bi bi-telephone-fill" title="Phone"></i></a>
+                        <a href="mailto:info@galerija-vidovic.com"><i class="bi bi-envelope-fill" title="E-mail"></i></a>
+                        <a href="https://www.facebook.com/Galerija-Emanuel-Vidovi%C4%87-312336775465699/"><i
+                                class="bi bi-facebook" title="Facebook"></i></a>
+                        <a href="https://www.instagram.com/muzejgradasplita/"><i class="bi bi-instagram" title="Instagram"></i></a>
+                    </p>
+                </article>
+                <article class="right__col">
+                    <form>
+
+                        <label for="name">Ime i prezime:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Poruka:</label>
+                        <textarea id="message" name="message" required style="height:200px"></textarea>
+
+                        <input type="submit" value="Pošalji">
+
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__logo">
+            <img src="./assets/logo-mgs.png" alt="Muzej grada Splita" title="Muzej grada Splita">
+        </div>
+        <div class="footer__info">
+            <p>Poljana kraljice Jelene bb, 21000 Split</p>
+            <p><a href="mailto:info@galerija-vidovic.com">info@galerija-vidovic.com</a></p>
+            <p><a href=tel:+38521360155>021/ 360 155</a></p>
+            <p><a href="tel:+38521360156">021/ 360 156</a></p>
+            <p>Copyright &copy 2022 PWKS | Anamarija Papić</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

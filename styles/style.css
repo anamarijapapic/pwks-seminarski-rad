@@ -1,0 +1,570 @@
+/* || FONTS AND ICONS */
+
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+
+/* || GENERAL */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 6.25rem;
+    background-color: #121212;
+    color: #f2f2f2;
+}
+
+
+/* || BUTTON - BACK TO TOP */
+
+#top-button {
+    position: fixed;
+    z-index: 99;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: none;
+    box-shadow: 0.25rem 0.25rem 0.5rem #000000;
+    border: none;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: #2a1a1f;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+}
+
+#top-button:hover {
+    background-color: #764134;
+}
+
+
+/* || HEADER AND NAVIGATION BAR */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 1.25rem 5%;
+    background: #121212;
+    text-transform: uppercase;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    font-family: "Poiret One", cursive;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+header .logo img {
+    width: 12.5rem;
+    height: auto;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    display: none;
+    font-size: 1.4rem;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.hamburger__icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hamburger__icon:hover .bar1,
+.hamburger__icon:hover .bar2,
+.hamburger__icon:hover .bar3 {
+    background-color: #afa060;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    transition: 0.4s;
+    margin: 0.5rem 0;
+    width: 35px;
+    height: 3px;
+    background-color: #f2f2f2;
+}
+
+.change__shape .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change__shape .bar2 {
+    opacity: 0;
+}
+
+.change__shape .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.125rem;
+    font-family: "Poiret One", cursive;
+    color: #f2f2f2;
+}
+
+.navbar ul li a:hover {
+    transition: 0.3s;
+    color: #afa060;
+}
+
+.navbar ul li ul {
+    position: absolute;
+    z-index: 1001;
+    left: 0;
+    display: none;
+    width: 12.5rem;
+    background: #121212;
+}
+
+.navbar ul li ul li {
+    box-shadow: 0.25rem 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.75);
+    border-top: 1px solid #afa060;
+    width: 100%;
+}
+
+.navbar ul li:focus-within>ul,
+.navbar ul li:hover>ul {
+    display: initial;
+}
+
+
+/* || HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 1.875rem;
+    width: 100%;
+    height: 90vh;
+}
+
+.hero video {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.hero__caption {
+    position: relative;
+    z-index: 20;
+    margin-right: 3vw;
+    width: 80vw;
+    height: auto;
+    font-family: "Italianno", cursive;
+    text-align: right;
+}
+
+.hero__caption h1 {
+    font-size: clamp(4rem, 14vw, 12rem);
+    font-weight: 200;
+}
+
+.hero__caption h1 span {
+    display: block;
+    margin-top: -2rem;
+    font-size: clamp(3rem, 14vw, 12rem);
+    color: #ad8350;
+}
+
+
+/* || MAIN */
+
+main {
+    margin: auto;
+    margin-top: 0.625rem;
+    width: 95%;
+}
+
+#gallery,
+#artist,
+#exhibition,
+#visit,
+#contact {
+    scroll-margin-top: 20vh;
+}
+
+#general__info,
+#working__hours,
+#ticket__prices {
+    scroll-margin-top: 30vh;
+}
+
+h2 {
+    font-size: 8vh;
+    font-family: "Italianno", cursive;
+    font-weight: 200;
+}
+
+.frame {
+    margin: -1.875rem 0 2.5rem 0;
+    border: 3.125rem solid transparent;
+    border-image: url(../assets/frame.png) 100;
+    height: 80vh;
+    width: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+article {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* || SECTION - Gallery */
+
+#gallery .frame .left__col {
+    padding: 5%;
+    background: #ad8350;
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
+    line-height: clamp(0.8rem, 4vw, 2rem);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #121212;
+}
+
+#gallery .frame .right__col {
+    background: url(../assets/gallery.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/* || SECTION - Artist */
+
+.artist__video {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    align-self: center;
+    margin: auto;
+    width: 68vw;
+    text-align: center;
+}
+
+.overlay h3 {
+    font-size: clamp(3rem, 10vw, 9rem);
+    font-family: "Italianno", cursive;
+    font-weight: 200;
+}
+
+.overlay h3 span {
+    display: block;
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    letter-spacing: 0.2rem;
+    font-family: "Poiret One", cursive;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ad8350;
+}
+
+
+/* || SECTION - Exhibition */
+
+.picture__col {
+    background: url(../assets/texture.jpg) no-repeat;
+    background-size: cover;
+}
+
+.picture__col img {
+    width: auto;
+    height: 100%;
+    max-height: 70vh;
+}
+
+
+/* || SECTION - Visit */
+
+#general__info,
+#ticket__prices,
+#working__hours {
+    flex-direction: column;
+    padding: 3%;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#general__info,
+#ticket__prices {
+    background-color: #ad8350;
+}
+
+#working__hours {
+    background-color: #764134;
+}
+
+h3 {
+    font-size: clamp(1rem, 6vw, 2rem);
+    font-family: "Italianno", cursive;
+    font-weight: 200;
+}
+
+h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    letter-spacing: 0.25rem;
+    font-family: "Poiret One", cursive;
+    text-transform: uppercase;
+}
+
+iframe {
+    margin: 0.25rem;
+}
+
+
+/* || SECTION - Contact */
+
+#contact {
+    margin-bottom: 5vh;
+}
+
+#contact .frame .left__col p {
+    padding: 5%;
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
+    line-height: clamp(0.8rem, 4vw, 2rem);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f2f2f2;
+}
+
+.bi {
+    margin: 0.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #afa060;
+}
+
+#contact .frame .right__col {
+    padding: 2rem;
+    background-color: #ad8350;
+}
+
+form label {
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+    font-family: "Poiret One", cursive;
+    text-transform: uppercase;
+    color: #121212;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    resize: vertical;
+    background-color: #f2f2f2;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=submit] {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem 1.5rem;
+    background-color: #2a1a1f;
+    cursor: pointer;
+    letter-spacing: 0.25rem;
+    font-family: "Poiret One", cursive;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #f2f2f2;
+}
+
+input[type=submit]:hover {
+    background-color: #764134;
+}
+
+
+/* || FOOTER */
+
+footer {
+    display: flex;
+    width: auto;
+    height: 30vh;
+    background-color: #1f1f1f;
+}
+
+.footer__logo {
+    display: inline-block;
+    text-align: center;
+    margin: auto 2rem;
+    max-width: 50%;
+}
+
+.footer__logo img {
+    width: auto;
+    height: 10vh;
+}
+
+.footer__info {
+    align-self: center;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.1rem;
+    font-family: "Poiret One", cursive;
+    text-transform: uppercase;
+}
+
+.footer__info a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+
+/* || MEDIA QUERIES */
+
+@media (max-width: 1300px) {
+    header {
+        padding: 1.25rem;
+    }
+
+    header .logo h1 {
+        float: left;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    header .logo img {
+        margin-right: 10px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background: #121212;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #121212;
+    }
+
+    .two__column {
+        flex-direction: column;
+        height: 160vh;
+    }
+
+    .three__column {
+        flex-direction: column;
+        height: 190vh;
+    }
+    
+    #contact .two__column {
+        height: 130vh;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 1301px) {
+    body {
+        padding-top: 10rem;
+    }
+
+    .row article img {
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .row article img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .two__column {
+        height: 120vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .two__column {
+        height: 110vh;
+    }
+}
